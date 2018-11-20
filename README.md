@@ -6,9 +6,17 @@ moving across the screen. The BGR filter/colour threshold and minimum radius of 
 contours generated per frame. The eroding/dilating iterations (used on the frame to help with contour precision) can also be 
 specified as either command line arguments or config options in the top of the file. 
 
+![ana](https://i.imgur.com/qmAyBDO.png "With ball1-analog.mp4")
+*Kalman filter is represented as a vertical pink line, opencv contour detection as the blue circle. Example execution with ball1-analog*
+
+![noise](https://i.imgur.com/mpLDokC.png "With ball1-noise.mp4")
+*Example execution with ball1-noise.mp4*
+
 ## Usage
 First install opencv2 for Python3, then run:
+
 ```python3 ballestimator.py /path/to/video/file [erode_iterations] [dilate_iterations] [min_radius]```
+
 The video file must be specified, but the other arguments are optional. The defaults for the optional arguments are
 1, 5, and 10 respectively. There are further configuration options in the header of ballestimator.py (the colour filter 
 BGR value and threshold, for detecting contours in the image).
